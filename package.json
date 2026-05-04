@@ -1,0 +1,31 @@
+{
+  "name": "waldo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w apps/client\" \"npm run dev -w apps/server\"",
+    "lint": "eslint .",
+    "format": "prettier --write \"**/*.{js,jsx,json,css,md}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bowman025/project-wheres-waldo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bowman025/project-wheres-waldo/issues"
+  },
+  "homepage": "https://github.com/bowman025/project-wheres-waldo#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.3"
+  }
+}
