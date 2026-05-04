@@ -1,5 +1,9 @@
 const { Router } = require('express');
-const { startSession, validateGuess, completeSession } = require('../controllers/sessionController');
+const {
+  startSession,
+  validateGuess,
+  completeSession,
+} = require('../controllers/sessionController');
 
 const router = Router();
 

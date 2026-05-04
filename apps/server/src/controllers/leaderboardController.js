@@ -37,6 +37,6 @@ const getLeaderBoard = async (req, res) => {
     .slice(0, LEADERBOARD_LIMIT);
 
   res.json(scores);
-}
+};
 
 module.exports = { getLeaderBoard };

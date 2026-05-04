@@ -31,7 +31,9 @@ const validateGuess = async (req, res) => {
   const { characterId, x, y } = req.body;
 
   if (!characterId || x === undefined || y === undefined) {
-    return res.status(400).json({ error: 'characterId, x and y are required.' });
+    return res
+      .status(400)
+      .json({ error: 'characterId, x and y are required.' });
   }
 
   const session = await prisma.gameSession.findUnique({
