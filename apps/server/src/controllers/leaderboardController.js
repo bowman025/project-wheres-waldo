@@ -33,7 +33,7 @@ const getLeaderBoard = async (req, res) => {
       playerName: session.playerName,
       time: Math.floor((session.completedAt - session.startedAt) / 1000),
     }))
-    .sort((a, b) => a.tim - b.time)
+    .sort((a, b) => a.time - b.time)
     .slice(0, LEADERBOARD_LIMIT);
 
   res.json(scores);

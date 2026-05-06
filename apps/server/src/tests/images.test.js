@@ -1,13 +1,13 @@
 const request = require('supertest');
 const app = require('../app');
-const { clearDataBase, createTestImage } = require('./helpers');
+const { clearDatabase, createTestImage } = require('./helpers');
 
 beforeEach(async () => {
-  await clearDataBase();
+  await clearDatabase();
 });
 
 afterAll(async () => {
-  await clearDataBase();
+  await clearDatabase();
 });
 
 describe('GET /api/images', () => {
