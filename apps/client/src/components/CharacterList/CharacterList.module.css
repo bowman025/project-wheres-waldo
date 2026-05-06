@@ -1,0 +1,25 @@
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.found {
+  color: #2e7d32;
+  text-decoration: line-through;
+}
+
+.indicator {
+  font-size: 1rem;
+}
