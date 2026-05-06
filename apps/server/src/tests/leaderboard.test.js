@@ -17,6 +17,7 @@ beforeEach(async () => {
 
 afterAll(async () => {
   await clearDatabase();
+  await prisma.$disconnect();
 });
 
 describe('GET /api/leaderboard', () => {

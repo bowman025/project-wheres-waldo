@@ -5,6 +5,7 @@ const {
   createTestImage,
   createTestSession,
   completeTestSession,
+  prisma
 } = require('./helpers');
 
 let image;
@@ -16,6 +17,7 @@ beforeEach(async () => {
 
 afterAll(async () => {
   await clearDatabase();
+  await prisma.$disconnect();
 });
 
 describe('POST /api/sessions', () => {
