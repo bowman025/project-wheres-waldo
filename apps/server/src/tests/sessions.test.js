@@ -5,7 +5,7 @@ const {
   createTestImage,
   createTestSession,
   completeTestSession,
-  prisma
+  prisma,
 } = require('./helpers');
 
 let image;
@@ -13,11 +13,6 @@ let image;
 beforeEach(async () => {
   await clearDatabase();
   image = await createTestImage();
-});
-
-afterAll(async () => {
-  await clearDatabase();
-  await prisma.$disconnect();
 });
 
 describe('POST /api/sessions', () => {
@@ -72,12 +67,20 @@ describe('POST /api/sessions/:token/validate', () => {
     for (const char of image.characters.slice(0, -1)) {
       await request(app)
         .post(`/api/sessions/${session.token}/validate`)
-        .send({ characterId: char.id, x: char.xMin + 0.01, y: char.yMin + 0.01 });
+        .send({
+          characterId: char.id,
+          x: char.xMin + 0.01,
+          y: char.yMin + 0.01,
+        });
     }
     const lastChar = image.characters[image.characters.length - 1];
     const res = await request(app)
       .post(`/api/sessions/${session.token}/validate`)
-      .send({ characterId: lastChar.id, x: lastChar.xMin + 0.01, y: lastChar.yMin + 0.01 });
+      .send({
+        characterId: lastChar.id,
+        x: lastChar.xMin + 0.01,
+        y: lastChar.yMin + 0.01,
+      });
     expect(res.status).toBe(200);
     expect(res.body).toMatchObject({ correct: true, complete: true });
   });

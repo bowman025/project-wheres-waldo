@@ -15,11 +15,6 @@ beforeEach(async () => {
   image = await createTestImage();
 });
 
-afterAll(async () => {
-  await clearDatabase();
-  await prisma.$disconnect();
-});
-
 describe('GET /api/leaderboard', () => {
   it('returns an empty array when no completed sessions exist', async () => {
     const res = await request(app).get(`/api/leaderboard?imageId=${image.id}`);

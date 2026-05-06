@@ -9,7 +9,7 @@
     "generate": "prisma generate",
     "seed": "node prisma/seed.js",
     "studio": "prisma studio",
-    "test": "jest --runInBand --forceExit",
+    "test": "jest --runInBand",
     "test:watch": "jest --watch --runInBand"
   },
   "jest": {
@@ -19,6 +19,9 @@
     ],
     "setupFiles": [
       "./src/tests/setup.js"
+    ],
+    "setupFilesAfterEnv": [
+      "./src/tests/cleanup.js"
     ]
   },
   "dependencies": {

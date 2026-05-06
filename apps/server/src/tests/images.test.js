@@ -1,14 +1,9 @@
 const request = require('supertest');
 const app = require('../app');
-const { clearDatabase, createTestImage, prisma } = require('./helpers');
+const { clearDatabase, createTestImage } = require('./helpers');
 
 beforeEach(async () => {
   await clearDatabase();
-});
-
-afterAll(async () => {
-  await clearDatabase();
-  await prisma.$disconnect();
 });
 
 describe('GET /api/images', () => {
