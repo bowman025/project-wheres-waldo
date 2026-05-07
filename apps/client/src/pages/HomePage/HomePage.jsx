@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { fetchImages } from '../../utils/api';
 import ImageCard from '../../components/ImageCard/ImageCard';
-import styles from './Homepage.module.css';
+import styles from './HomePage.module.css';
 
 const HomePage = () => {
   const [images, setImages] = useState([]);

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchLeaderboard, fetchImages } from '../../utils/api';
+import { fetchLeaderBoard, fetchImages } from '../../utils/api';
 import LeaderboardTable from '../../components/LeaderboardTable/LeaderboardTable';
 import styles from './LeaderboardPage.module.css';
 
@@ -13,7 +13,7 @@ const LeaderboardPage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    Promise.all([fetchLeaderboard(imageId), fetchImages()])
+    Promise.all([fetchLeaderBoard(imageId), fetchImages()])
       .then(([leaderboard, images]) => {
         setScores(leaderboard);
         const image = images.find((img) => img.id === Number(imageId));
