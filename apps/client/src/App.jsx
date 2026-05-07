@@ -10,7 +10,9 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/game/:imageId" element={<GamePage />} />
       <Route path="/leaderboard/:imageId" element={<LeaderboardPage />} />
-      <Route path="/dev" element={<DevPage />} />
+      {import.meta.env.VITE_DEV_TOOLS === 'true' && (
+        <Route path="/dev" element={<DevPage />} />
+      )}
     </Routes>
   );
 }
