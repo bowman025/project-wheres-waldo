@@ -20,6 +20,7 @@ const TargetingBox = ({
           left: targetingBox.pixelX,
           top: targetingBox.pixelY,
         }}
+        onClick={(e) => e.stopPropagation()}
       >
         <ul className={styles.list}>
           {unfoundCharacters.map((character) => (

@@ -5,6 +5,7 @@ import useGameSession from '../../hooks/useGameSession';
 import CharacterList from '../../components/CharacterList/CharacterList';
 import TargetingBox from '../../components/TargetingBox/TargetingBox';
 import PlayerNameModal from '../../components/PlayerNameModal/PlayerNameModal';
+import GuessToast from '../../components/GuessToast/GuessToast';
 import styles from './GamePage.module.css';
 
 const GamePage = () => {
@@ -30,6 +31,7 @@ const GamePage = () => {
     foundCharacters,
     isComplete,
     targetingBox,
+    guessResult,
     handleImageClick,
     handleGuess,
     handleSubmitName,
@@ -51,6 +53,7 @@ const GamePage = () => {
 
   return (
     <div className={styles.page}>
+      <GuessToast guessResult={guessResult} />
       <div className={styles.header}>
         <CharacterList
           characters={image.characters}

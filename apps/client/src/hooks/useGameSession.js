@@ -8,6 +8,7 @@ const useGameSession = (imageId, characters) => {
   const [elapsedTime, setElapsedTime] = useState(null);
   const [error, setError] = useState(null);
   const [targetingBox, setTargetingBox] = useState(null);
+  const [guessResult, setGuessResult] = useState(null);
 
   useEffect(() => {
     if (!imageId) return;
@@ -55,11 +56,17 @@ const useGameSession = (imageId, characters) => {
         if (result.complete) {
           setIsComplete(true);
         }
+
+        const character = characters.find((c) => c.id === characterId);
+        setGuessResult({ correct: result.correct, characterName: character?.name });
+
+        setTimeout(() => setGuessResult(null), 2000);
+
       } catch (err) {
         setError(err.message);
       }
     },
-    [token, targetingBox]
+    [token, targetingBox, characters]
   );
 
   const handleSubmitName = useCallback(
@@ -87,6 +94,7 @@ const useGameSession = (imageId, characters) => {
     elapsedTime,
     error,
     targetingBox,
+    guessResult,
     handleImageClick,
     handleGuess,
     handleSubmitName,
