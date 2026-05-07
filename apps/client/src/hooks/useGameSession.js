@@ -6,6 +6,7 @@ const useGameSession = (imageId, characters) => {
   const [foundCharacters, setFoundCharacters] = useState([]);
   const [isComplete, setIsComplete] = useState(false);
   const [elapsedTime, setElapsedTime] = useState(null);
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
   const [error, setError] = useState(null);
   const [targetingBox, setTargetingBox] = useState(null);
   const [guessResult, setGuessResult] = useState(null);
@@ -16,6 +17,16 @@ const useGameSession = (imageId, characters) => {
       .then((data) => setToken(data.token))
       .catch((err) => setError(err.message));
   }, [imageId]);
+
+  useEffect(() => {
+    if (!token || isComplete) return;
+
+    const interval = setInterval(() => {
+      setElapsedSeconds((prev) => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [token, isComplete]);
 
   const handleImageClick = useCallback(
     (e) => {
@@ -94,6 +105,7 @@ const useGameSession = (imageId, characters) => {
     foundCharacters,
     isComplete,
     elapsedTime,
+    elapsedSeconds,
     error,
     targetingBox,
     guessResult,

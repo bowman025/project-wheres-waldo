@@ -6,6 +6,7 @@ import CharacterList from '../../components/CharacterList/CharacterList';
 import TargetingBox from '../../components/TargetingBox/TargetingBox';
 import PlayerNameModal from '../../components/PlayerNameModal/PlayerNameModal';
 import GuessToast from '../../components/GuessToast/GuessToast';
+import Timer from '../../components/Timer/Timer';
 import styles from './GamePage.module.css';
 
 const GamePage = () => {
@@ -32,6 +33,7 @@ const GamePage = () => {
     isComplete,
     targetingBox,
     guessResult,
+    elapsedSeconds,
     handleImageClick,
     handleGuess,
     handleSubmitName,
@@ -59,6 +61,7 @@ const GamePage = () => {
           characters={image.characters}
           foundCharacters={foundCharacters}
         />
+        <Timer seconds={elapsedSeconds} />
       </div>
       <div className={styles.imageWrapper} onClick={handleImageClick}>
         <img
