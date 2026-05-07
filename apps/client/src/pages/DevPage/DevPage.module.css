@@ -1,0 +1,58 @@
+.page {
+  padding: 2rem;
+}
+
+.picker {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.workspace {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.clickList {
+  font-family: monospace;
+  font-size: 0.85rem;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.imageWrapper {
+  position: relative;
+  cursor: crosshair;
+  flex: 1;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  pointer-events: none;
+}

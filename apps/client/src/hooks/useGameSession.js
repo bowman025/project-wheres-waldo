@@ -58,10 +58,12 @@ const useGameSession = (imageId, characters) => {
         }
 
         const character = characters.find((c) => c.id === characterId);
-        setGuessResult({ correct: result.correct, characterName: character?.name });
+        setGuessResult({
+          correct: result.correct,
+          characterName: character?.name,
+        });
 
         setTimeout(() => setGuessResult(null), 2000);
-
       } catch (err) {
         setError(err.message);
       }
