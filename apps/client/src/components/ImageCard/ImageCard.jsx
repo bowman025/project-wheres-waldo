@@ -5,10 +5,7 @@ const ImageCard = ({ image }) => {
   const navigate = useNavigate();
 
   return (
-    <div
-      className={styles.card}
-      onClick={() => navigate(`/game/${image.id}`)}
-    >
+    <div className={styles.card} onClick={() => navigate(`/game/${image.id}`)}>
       <img src={image.url} alt={image.name} className={styles.image} />
       <div className={styles.info}>
         <h2 className={styles.name}>{image.name}</h2>

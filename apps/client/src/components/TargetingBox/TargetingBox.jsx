@@ -1,16 +1,19 @@
 import styles from './TargetingBox.module.css';
 
-const TargetingBox = ({ targetingBox, characters, foundCharacters, onGuess, onDismiss }) => {
+const TargetingBox = ({
+  targetingBox,
+  characters,
+  foundCharacters,
+  onGuess,
+  onDismiss,
+}) => {
   const unfoundCharacters = characters.filter(
     (c) => !foundCharacters.includes(c.id)
   );
 
   return (
     <>
-      <div
-        className={styles.overlay}
-        onClick={onDismiss}
-      />
+      <div className={styles.overlay} onClick={onDismiss} />
       <div
         className={styles.box}
         style={{

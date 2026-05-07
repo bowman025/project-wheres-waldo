@@ -16,51 +16,65 @@ const useGameSession = (imageId, characters) => {
       .catch((err) => setError(err.message));
   }, [imageId]);
 
-  const handleImageClick = useCallback((e) => {
-    if (isComplete) return;
+  const handleImageClick = useCallback(
+    (e) => {
+      if (isComplete) return;
 
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width;
-    const y = (e.clientY - rect.top) / rect.height;
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width;
+      const y = (e.clientY - rect.top) / rect.height;
 
-    setTargetingBox({
-      x,
-      y,
-      pixelX: e.clientX - rect.left,
-      pixelY: e.clientY - rect.top,
-    });
-  }, [isComplete]);
+      setTargetingBox({
+        x,
+        y,
+        pixelX: e.clientX - rect.left,
+        pixelY: e.clientY - rect.top,
+      });
+    },
+    [isComplete]
+  );
 
-  const handleGuess = useCallback(async (characterId) => {
-    if (!token || !targetingBox) return;
+  const handleGuess = useCallback(
+    async (characterId) => {
+      if (!token || !targetingBox) return;
 
-    setTargetingBox(null);
+      setTargetingBox(null);
 
-    try {
-      const result = await validateGuess(token, characterId, targetingBox.x, targetingBox.y);
+      try {
+        const result = await validateGuess(
+          token,
+          characterId,
+          targetingBox.x,
+          targetingBox.y
+        );
 
-      if (result.correct) {
-        setFoundCharacters((prev) => [...prev, characterId]);
+        if (result.correct) {
+          setFoundCharacters((prev) => [...prev, characterId]);
+        }
+
+        if (result.complete) {
+          setIsComplete(true);
+        }
+      } catch (err) {
+        setError(err.message);
       }
+    },
+    [token, targetingBox]
+  );
 
-      if (result.complete) {
-        setIsComplete(true);
+  const handleSubmitName = useCallback(
+    async (playerName) => {
+      if (!token) return;
+      try {
+        const result = await completeSession(token, playerName);
+        setElapsedTime(result.time);
+        return result;
+      } catch (err) {
+        setError(err.message);
       }
-    } catch (err) {
-      setError(err.message);
-    }
-  }, [token, targetingBox]);
-
-  const handleSubmitName = useCallback(async (playerName) => {
-    if (!token) return;
-    try {
-      const result = await completeSession(token, playerName);
-      setElapsedTime(result.time);
-      return result;
-    } catch (err) {
-      setError(err.message);
-    }
-  }, [token]);
+    },
+    [token]
+  );
 
   const dismissTargetingBox = useCallback(() => {
     setTargetingBox(null);
