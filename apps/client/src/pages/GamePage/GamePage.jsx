@@ -75,10 +75,7 @@ const GamePage = () => {
         )}
       </div>
       {isComplete && !modalDismissed && (
-        <PlayerNameModal
-          onSubmit={handleSubmit}
-          onDismiss={handleDismiss}
-        />
+        <PlayerNameModal onSubmit={handleSubmit} onDismiss={handleDismiss} />
       )}
     </div>
   );
