@@ -8,8 +8,15 @@ const leaderboardRouter = require('./routes/leaderboard');
 
 const app = express();
 
+const allowedOrigins = [
+  'http://localhost:5173',
+  process.env.CLIENT_URL,
+].filter(Boolean);
+
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+  origin: allowedOrigins,
+}));
 app.use(express.json());
 
 app.use('/api/images', imagesRouter);
