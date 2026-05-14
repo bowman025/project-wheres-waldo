@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className={styles.nav}>
       <button className={styles.logo} onClick={() => navigate('/')}>
-        Where's Waldo?
+        FindEm
       </button>
     </nav>
   );
