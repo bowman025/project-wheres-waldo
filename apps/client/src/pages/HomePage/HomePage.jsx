@@ -20,7 +20,6 @@ const HomePage = () => {
 
   return (
     <div className={styles.page}>
-      <h1 className={styles.title}>Where's Waldo?</h1>
       <p className={styles.subtitle}>Choose a scene to start playing</p>
       <div className={styles.grid}>
         {images.map((image) => (
