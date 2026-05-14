@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className={styles.nav}>
       <button className={styles.logo} onClick={() => navigate('/')}>
-        FindEm
+        FINDEM
       </button>
       <p className={styles.subtitle}>A Photo Tagging Game</p>
     </nav>

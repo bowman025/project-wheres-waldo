@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Smokum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Badeen+Display&display=swap');
 
 .nav {
   margin: 1rem 2rem;
@@ -7,30 +7,31 @@
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
-  background-color: var(--background-2);
+  background-color: var(--muted-rainbow-5);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .logo {
   background: none;
   border: none;
-  color: var(--muted-rainbow-5);
-  font-family: "Smokum", serif;
-  font-size: 3rem;
+  color: var(--background-1);
+  font-family: "Badeen Display", system-ui;
+  font-size: 3.3rem;
   font-weight: 400;
   font-style: normal;
   cursor: pointer;
   padding: 0;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.33rem;
 }
 
 .logo:hover {
-  color: #ddd71f;
+  color: var(--background-2);
 }
 
 .subtitle {
   margin-top: -10px;
   margin-bottom: 10px;
-  color: var(--text-2);
+  color: var(--background-2);
   font-style: italic;
+  font-size: 1.2rem;
 }

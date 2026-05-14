@@ -86,4 +86,23 @@ h6 {
   --muted-rainbow-4: #746198;
   --muted-rainbow-5: #B3AF38;
   --muted-rainbow-6: #A75051;
+  --rainbow-4: #601ddd;
+  --rainbow-5: #ddd71f;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background-1);
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  background-color: var(--background-1);
+  color: var(--text-1);
 }
