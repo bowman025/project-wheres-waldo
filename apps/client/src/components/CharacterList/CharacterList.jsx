@@ -6,12 +6,27 @@ const CharacterList = ({ characters, foundCharacters }) => {
       {characters.map((character) => {
         const found = foundCharacters.includes(character.id);
         return (
-          <li
-            key={character.id}
-            className={`${styles.item} ${found ? styles.found : ''}`}
-          >
-            <span className={styles.indicator}>{found ? '✓' : '○'}</span>
-            {character.name}
+          <li key={character.id} className={styles.item}>
+            <div className={styles.portraitWrapper}>
+              {character.portraitUrl ? (
+                <img
+                  src={character.portraitUrl}
+                  alt={character.name}
+                  className={`${styles.portrait} ${found ? styles.foundPortrait : ''}`}
+                  draggable={false}
+                />
+              ) : (
+                <div className={`${styles.portraitPlaceholder} ${found ? styles.foundPortrait : ''}`} />
+              )}
+              {found && (
+                <div className={styles.overlay}>
+                  <span className={styles.checkmark}>✓</span>
+                </div>
+              )}
+            </div>
+            <span className={`${styles.name} ${found ? styles.foundName : ''}`}>
+              {character.name}
+            </span>
           </li>
         );
       })}
