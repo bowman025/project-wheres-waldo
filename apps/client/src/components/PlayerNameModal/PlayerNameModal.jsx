@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import styles from './PlayerNameModal.module.css';
 
-const PlayerNameModal = ({ onSubmit, onDismiss }) => {
+const formatTime = (seconds) => {
+  const m = Math.floor(seconds / 60).toString().padStart(2, '0');
+  const s = (seconds % 60).toString().padStart(2, '0');
+  return `${m}:${s}`;
+};
+
+const PlayerNameModal = ({ time, onSubmit, onDismiss }) => {
   const [playerName, setPlayerName] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
@@ -16,6 +22,7 @@ const PlayerNameModal = ({ onSubmit, onDismiss }) => {
     <div className={styles.overlay}>
       <div className={styles.modal}>
         <h2 className={styles.title}>You found them all! 🎉</h2>
+        <p className={styles.time}>Your time: {formatTime(time)}</p>
         <p className={styles.subtitle}>Enter your name for the leaderboard</p>
         <form onSubmit={handleSubmit} className={styles.form}>
           <input

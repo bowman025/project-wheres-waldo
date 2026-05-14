@@ -81,7 +81,11 @@ const GamePage = () => {
         )}
       </div>
       {isComplete && !modalDismissed && (
-        <PlayerNameModal onSubmit={handleSubmit} onDismiss={handleDismiss} />
+        <PlayerNameModal
+          time={elapsedSeconds}
+          onSubmit={handleSubmit}
+          onDismiss={handleDismiss}
+        />
       )}
     </div>
   );
