@@ -27,6 +27,7 @@ async function main() {
       characters: [
         {
           name: 'Claire Moreau',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750801/french-claire_s8yesx.png',
           xMin: 0.24,
           xMax: 0.3,
           yMin: 0.3,
@@ -34,6 +35,7 @@ async function main() {
         },
         {
           name: 'Marcel Lefebvre',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750800/french-marcel_imyj6o.png',
           xMin: 0.63,
           xMax: 0.72,
           yMin: 0.61,
@@ -41,6 +43,7 @@ async function main() {
         },
         {
           name: 'Lucas Garnier',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750800/french-lucas_e7l1zc.png',
           xMin: 0.11,
           xMax: 0.18,
           yMin: 0.52,
@@ -54,6 +57,7 @@ async function main() {
       characters: [
         {
           name: 'Thomas Greenway',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750787/english-thomas_wi7uct.png',
           xMin: 0.14,
           xMax: 0.2,
           yMin: 0.52,
@@ -61,6 +65,7 @@ async function main() {
         },
         {
           name: 'Eleanor Whitcombe',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750787/english-eleanor_rd0xvk.png',
           xMin: 0.3,
           xMax: 0.33,
           yMin: 0.14,
@@ -68,6 +73,7 @@ async function main() {
         },
         {
           name: 'Arthur Pemberton',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750788/english-arthur_lhwb6v.png',
           xMin: 0.32,
           xMax: 0.38,
           yMin: 0.6,
@@ -75,6 +81,7 @@ async function main() {
         },
         {
           name: 'Julian Hawthorne',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750787/english-julian_j2n8jx.png',
           xMin: 0.46,
           xMax: 0.54,
           yMin: 0.83,
@@ -88,6 +95,7 @@ async function main() {
       characters: [
         {
           name: 'Red Mesa Rico',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750815/wild-red_ljgga8.png',
           xMin: 0.09,
           xMax: 0.15,
           yMin: 0.16,
@@ -95,6 +103,7 @@ async function main() {
         },
         {
           name: 'Sunny Belle Carter',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750815/wild-sunny_in3qcz.png',
           xMin: 0.41,
           xMax: 0.47,
           yMin: 0.36,
@@ -102,6 +111,7 @@ async function main() {
         },
         {
           name: 'Black Jack Mercer',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750815/wild-black_zmrvuj.png',
           xMin: 0.4,
           xMax: 0.49,
           yMin: 0.47,
@@ -109,6 +119,7 @@ async function main() {
         },
         {
           name: 'Sheriff Clay Boone',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750815/wild-sheriff_l6cl8s.png',
           xMin: 0.69,
           xMax: 0.8,
           yMin: 0.64,
@@ -116,6 +127,7 @@ async function main() {
         },
         {
           name: 'Lucky Vance Delgado',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750814/wild-lucky_cvax3j.png',
           xMin: 0.65,
           xMax: 0.73,
           yMin: 0.46,
@@ -129,6 +141,7 @@ async function main() {
       characters: [
         {
           name: 'Rex Merrick',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750770/cyber-rex-merrick_vnogkb.png',
           xMin: 0.28,
           xMax: 0.33,
           yMin: 0.11,
@@ -136,6 +149,7 @@ async function main() {
         },
         {
           name: 'Lira Vex',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750769/cyber-lira-vex_netvhg.png',
           xMin: 0.71,
           xMax: 0.76,
           yMin: 0.09,
@@ -143,6 +157,7 @@ async function main() {
         },
         {
           name: 'Wallyx',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750770/cyber-wallyx_sqergy.png',
           xMin: 0.53,
           xMax: 0.56,
           yMin: 0.26,
@@ -150,6 +165,7 @@ async function main() {
         },
         {
           name: 'Nova Faye',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750769/cyber-nova-faye_ghvsjl.png',
           xMin: 0.62,
           xMax: 0.66,
           yMin: 0.27,
@@ -157,6 +173,7 @@ async function main() {
         },
         {
           name: 'Zero-7',
+          portraitUrl: 'https://res.cloudinary.com/dszl8mguy/image/upload/q_auto/f_auto/v1778750769/cyber-zero-7_bamctm.png',
           xMin: 0.89,
           xMax: 0.94,
           yMin: 0.58,

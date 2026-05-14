@@ -16,15 +16,16 @@ model Image {
 }
 
 model Character {
-  id      Int    @id @default(autoincrement())
-  name    String
-  imageId Int
-  image   Image  @relation(fields: [imageId], references: [id])
-  xMin    Float
-  xMax    Float
-  yMin    Float
-  yMax    Float
-  finds   Find[]
+  id          Int     @id @default(autoincrement())
+  name        String
+  portraitUrl String?
+  imageId     Int
+  image       Image   @relation(fields: [imageId], references: [id])
+  xMin        Float
+  xMax        Float
+  yMin        Float
+  yMax        Float
+  finds       Find[]
 }
 
 model GameSession {

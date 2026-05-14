@@ -7,6 +7,7 @@ const getImages = async (req, res) => {
         select: {
           id: true,
           name: true,
+          portraitUrl: true,
         },
       },
     },
