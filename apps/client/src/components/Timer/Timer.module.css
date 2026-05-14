@@ -1,4 +1,9 @@
 .timer {
+  align-self: flex-end;
+  background-color: var(--background-2);
+  margin-top: 0.5rem;
+  padding: 0 1rem;
+  border-radius: 8px 8px 0 0;
   font-size: 1.5rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;

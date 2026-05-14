@@ -28,7 +28,7 @@ const HomePage = () => {
         <p className={styles.status}>Loading...</p>
       ) : (
         <>
-          <p className={styles.subtitle}>Choose a scene to start playing</p>
+          <p className={styles.message}>Choose a scene to start playing</p>
           <div className={styles.grid}>
             {images.map((image) => (
               <ImageCard key={image.id} image={image} />

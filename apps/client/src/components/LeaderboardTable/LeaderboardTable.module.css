@@ -6,23 +6,22 @@
 .th {
   text-align: left;
   padding: 0.75rem 1rem;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid var(--background-2);
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .row:nth-child(even) {
-  background: #f9f9f9;
+  background: var(--background-2);
 }
 
 .td {
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid #eee;
 }
 
 .empty {
-  color: #666;
+  color: var(--background-2);
   text-align: center;
   padding: 2rem 0;
 }

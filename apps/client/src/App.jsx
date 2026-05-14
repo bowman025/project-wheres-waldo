@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage/HomePage';
 import GamePage from './pages/GamePage/GamePage';
 import LeaderboardPage from './pages/LeaderboardPage/LeaderboardPage';
 import DevPage from './pages/DevPage/DevPage';
+import Footer from './components/Footer/Footer';
 import styles from './App.module.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           )}
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }

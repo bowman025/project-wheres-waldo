@@ -74,3 +74,16 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+:root {
+  --background-1: #1E1E24;
+  --background-2: #2A2B35;
+  --text-1: #E0E1DD;
+  --text-2: #bbbdb8;
+  --muted-rainbow-1: #4781A7;
+  --muted-rainbow-2: #589A5D;
+  --muted-rainbow-3: #B27D58;
+  --muted-rainbow-4: #746198;
+  --muted-rainbow-5: #B3AF38;
+  --muted-rainbow-6: #A75051;
+}

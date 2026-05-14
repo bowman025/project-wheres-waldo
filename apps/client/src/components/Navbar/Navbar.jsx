@@ -9,6 +9,7 @@ const Navbar = () => {
       <button className={styles.logo} onClick={() => navigate('/')}>
         FindEm
       </button>
+      <p className={styles.subtitle}>A Photo Tagging Game</p>
     </nav>
   );
 };

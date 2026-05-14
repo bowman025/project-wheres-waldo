@@ -1,0 +1,22 @@
+.footer {
+  margin: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-2);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 0;
+}
+
+.link {
+  color: var(--muted-rainbow-5);
+  text-decoration: none;
+}
+
+.disclaimer {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-2);
+}
