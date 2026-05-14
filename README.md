@@ -4,7 +4,7 @@ A full-stack photo tagging game where players find hidden characters in detailed
 
 ## How It Works
 
-Select a scene, then click on the image to find the hidden characters. A dropdown appears at your click location — if you think you've found someone, select their name. The server validates your guess against stored coordinates and keeps track of your time. Find all characters to complete the scene and submit your name to the leaderboard.
+Select a scene, then click on the image to find the hidden characters. A dropdown appears at your click location: if you think you've found someone, select their name. The server validates your guess against stored coordinates and keeps track of your time. Find all characters to complete the scene and submit your name to the leaderboard.
 
 ## Features
 
