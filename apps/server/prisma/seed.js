@@ -13,12 +13,10 @@ const prisma = new PrismaClient({ adapter });
 async function main() {
   console.log('Seeding database...');
 
-  await prisma.$transaction([
-    prisma.find.deleteMany(),
-    prisma.gameSession.deleteMany(),
-    prisma.character.deleteMany(),
-    prisma.image.deleteMany(),
-  ]);
+  await prisma.$executeRawUnsafe(`
+  TRUNCATE TABLE "Find", "GameSession", "Character", "Image" 
+  RESTART IDENTITY CASCADE;
+  `);
 
   const images = [
     {
