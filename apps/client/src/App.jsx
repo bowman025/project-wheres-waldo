@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage/HomePage';
 import GamePage from './pages/GamePage/GamePage';
 import LeaderboardPage from './pages/LeaderboardPage/LeaderboardPage';
 import DevPage from './pages/DevPage/DevPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import Footer from './components/Footer/Footer';
 import styles from './App.module.css';
 
@@ -19,6 +20,7 @@ function App() {
           {import.meta.env.VITE_DEV_TOOLS === 'true' && (
             <Route path="/dev" element={<DevPage />} />
           )}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />

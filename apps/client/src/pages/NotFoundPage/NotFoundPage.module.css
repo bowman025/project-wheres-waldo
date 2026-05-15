@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: clamp(260px, 80%, 600px);
+  margin: 5rem auto;
+  padding: 2rem;
+  border: 2px solid var(--muted-rainbow-5);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+
+  .message {
+    font-style: italic;
+  }
+
+  .btn {
+    margin-top: 0.5rem;
+    color: var(--background-1);
+    background-color: var(--muted-rainbow-5);
+    padding: 4px 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.3rem;
+
+    &:hover {
+      background-color: var(--rainbow-5);
+    }
+  }
+}
