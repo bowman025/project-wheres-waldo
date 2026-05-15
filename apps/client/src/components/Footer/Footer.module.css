@@ -6,7 +6,7 @@
   align-items: center;
   text-align: center;
   color: var(--background-1);
-  background-color: var(--muted-rainbow-5);
+  background-image: radial-gradient(circle at bottom, var(--text-2) 0%, var(--muted-rainbow-5) 60%);
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   padding: 0.5rem;
@@ -14,6 +14,7 @@
 
 .made {
   font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .link {

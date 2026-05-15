@@ -21,7 +21,7 @@ const PlayerNameModal = ({ time, onSubmit, onDismiss }) => {
   return (
     <div className={styles.overlay}>
       <div className={styles.modal}>
-        <h2 className={styles.title}>You found them all! 🎉</h2>
+        <h2 className={styles.title}>You found them all!</h2>
         <p className={styles.time}>Your time: {formatTime(time)}</p>
         <p className={styles.subtitle}>Enter your name for the leaderboard</p>
         <form onSubmit={handleSubmit} className={styles.form}>
@@ -31,7 +31,7 @@ const PlayerNameModal = ({ time, onSubmit, onDismiss }) => {
             placeholder="Your name"
             value={playerName}
             onChange={(e) => setPlayerName(e.target.value)}
-            maxLength={32}
+            maxLength={50}
             autoFocus
           />
           <div className={styles.actions}>

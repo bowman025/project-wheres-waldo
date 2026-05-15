@@ -18,6 +18,7 @@
   cursor: crosshair;
   user-select: none;
   width: 100%;
+  border: 2px solid var(--muted-rainbow-5);
 }
 
 .image {

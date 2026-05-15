@@ -1,4 +1,6 @@
 .page {
+  display: flex;
+  flex-direction: column;
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
@@ -7,14 +9,30 @@
 .title {
   font-size: 2rem;
   margin: 0 0 0.25rem;
+  text-align: center;
 }
 
 .subtitle {
   color: var(--text-2);
-  margin: 0 0 2rem;
+  font-style: italic;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 2px solid var(--muted-rainbow-5);
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .actions {
+  align-self: center;
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
@@ -22,24 +40,31 @@
 
 .button {
   padding: 0.75rem 1.5rem;
-  background: var(--background-2);
-  color: white;
+  color: var(--text-1);
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.95rem;
+
+  &:nth-child(1) {
+    background: var(--muted-rainbow-6);
+  }
+
+  &:nth-child(2) {
+    background: var(--muted-rainbow-4);
+  }
 }
 
-.button:hover {
-  background: var(--muted-rainbow-6);
+.button:nth-child(1):hover {
+  background: var(--rainbow-6);
 }
 
 .button:nth-child(2):hover {
-  background: var(--muted-rainbow-4);
+  background: var(--rainbow-4);
 }
 
 .status {
   text-align: center;
   padding: 4rem;
-  color: #666;
+  color: var(--text-1);
 }

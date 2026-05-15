@@ -7,18 +7,19 @@
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
-  color: white;
-  z-index: 200;
+  color: var(--text-1);
+  text-align: center;
+  z-index: 99;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.15s ease;
 }
 
 .correct {
-  background: #2e7d32;
+  background: var(--muted-rainbow-2);
 }
 
 .wrong {
-  background: #c62828;
+  background: var(--muted-rainbow-6);
 }
 
 @keyframes fadeIn {

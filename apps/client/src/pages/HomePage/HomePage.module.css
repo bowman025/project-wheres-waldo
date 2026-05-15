@@ -1,11 +1,11 @@
 .page {
-  margin: 0 auto;
   padding: 2rem;
 }
 
 .message {
   color: var(--text-2);
   margin: 0 0 1rem;
+  font-size: 1.2rem;
 }
 
 .grid {

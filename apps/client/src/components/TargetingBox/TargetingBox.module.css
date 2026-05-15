@@ -7,8 +7,8 @@
 .box {
   position: absolute;
   z-index: 20;
-  background: white;
-  border: 2px solid #333;
+  background-color: var(--background-2);
+  border: 2px solid var(--muted-rainbow-5);
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   min-width: 150px;
@@ -19,6 +19,10 @@
   list-style: none;
   margin: 0;
   padding: 0.25rem 0;
+
+  li:not(:last-child) {
+    border-bottom: 1px solid var(--muted-rainbow-5);
+  }
 }
 
 .button {
@@ -29,8 +33,9 @@
   border: none;
   cursor: pointer;
   font-size: 0.95rem;
+  color: var(--text-1);
 }
 
 .button:hover {
-  background: #f0f0f0;
+  background-color: var(--background-1);
 }

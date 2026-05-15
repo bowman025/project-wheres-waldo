@@ -6,7 +6,7 @@ const ImageCard = ({ image }) => {
 
   return (
     <div className={styles.card} onClick={() => navigate(`/game/${image.id}`)}>
-      <img src={image.url} alt={image.name} className={styles.image} />
+      <div className={styles.imageWrapper}><img src={image.url} alt={image.name} className={styles.image} /></div>
       <div className={styles.info}>
         <h2 className={styles.name}>{image.name}</h2>
         <p className={styles.characters}>

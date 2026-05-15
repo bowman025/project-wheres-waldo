@@ -9,30 +9,30 @@
 }
 
 .modal {
-  background: white;
+  background-color: var(--background-1);
+  border: 1px solid var(--muted-rainbow-5);
   border-radius: 12px;
   padding: 2rem;
   width: 90%;
   max-width: 400px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 .title {
-  margin: 0 0 0.5rem;
   font-size: 1.5rem;
+  font-style: italic;
 }
 
+.title,
 .subtitle {
-  margin: 0 0 1.5rem;
-  color: #666;
+  color: var(--text-1);
 }
 
 .time {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
-  margin: 0 0 0.5rem;
-  color: #1a1a1a;
 }
 
 .form {
@@ -42,15 +42,15 @@
 }
 
 .input {
-  padding: 0.75rem 1rem;
-  border: 2px solid #ddd;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--text-1);
   border-radius: 6px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   outline: none;
 }
 
 .input:focus {
-  border-color: #333;
+  border-color: var(--muted-rainbow-5);
 }
 
 .actions {
@@ -61,21 +61,21 @@
 
 .skipButton {
   padding: 0.6rem 1.2rem;
-  background: none;
-  border: 2px solid #ddd;
+  background-color: var(--muted-rainbow-4);
+  border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.95rem;
 }
 
 .skipButton:hover {
-  background: #f0f0f0;
+  background-color: var(--rainbow-4);
 }
 
 .submitButton {
   padding: 0.6rem 1.2rem;
-  background: #333;
-  color: white;
+  background-color: var(--muted-rainbow-5);
+  color: var(--background-1);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -88,5 +88,5 @@
 }
 
 .submitButton:not(:disabled):hover {
-  background: #555;
+  background: var(--rainbow-5);
 }

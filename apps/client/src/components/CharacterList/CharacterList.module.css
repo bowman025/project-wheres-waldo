@@ -22,7 +22,7 @@
   height: 64px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid var(--text-2);
+  border: 1px solid var(--muted-rainbow-5);
   flex-shrink: 0;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .checkmark {
-  color: var(--text-1);
+  color: var(--muted-rainbow-5);
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1;

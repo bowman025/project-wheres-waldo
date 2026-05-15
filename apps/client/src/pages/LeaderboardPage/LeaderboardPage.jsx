@@ -9,6 +9,7 @@ const LeaderboardPage = () => {
   const navigate = useNavigate();
   const [scores, setScores] = useState([]);
   const [imageName, setImageName] = useState('');
+  const [imageImage, setImageImage] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -17,7 +18,10 @@ const LeaderboardPage = () => {
       .then(([leaderboard, images]) => {
         setScores(leaderboard);
         const image = images.find((img) => img.id === Number(imageId));
-        if (image) setImageName(image.name);
+        if (image) {
+          setImageName(image.name);
+          setImageImage(image.url);
+        };
       })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
@@ -30,6 +34,11 @@ const LeaderboardPage = () => {
     <div className={styles.page}>
       <h1 className={styles.title}>Leaderboard</h1>
       {imageName && <p className={styles.subtitle}>{imageName}</p>}
+      {imageImage &&
+        <div className={styles.imageWrapper}>
+          <img className={styles.image} src={imageImage} alt={imageName} />
+        </div>
+      }
       <LeaderboardTable scores={scores} />
       <div className={styles.actions}>
         <button

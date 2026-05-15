@@ -8,8 +8,8 @@ const GuessToast = ({ guessResult }) => {
       className={`${styles.toast} ${guessResult.correct ? styles.correct : styles.wrong}`}
     >
       {guessResult.correct
-        ? `✓ Found ${guessResult.characterName}!`
-        : '✗ Not quite, try again!'}
+        ? `Found ${guessResult.characterName}!`
+        : 'Not quite, try again!'}
     </div>
   );
 };
