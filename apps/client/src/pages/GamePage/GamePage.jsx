@@ -29,6 +29,7 @@ const GamePage = () => {
   }, [imageId]);
 
   const {
+    token,
     foundCharacters,
     isComplete,
     targetingBox,
@@ -43,7 +44,7 @@ const GamePage = () => {
   const handleSubmit = async (playerName) => {
     await handleSubmitName(playerName);
     setModalDismissed(true);
-    navigate(`/leaderboard/${imageId}`);
+    navigate(`/leaderboard/${imageId}`, { state: { token } });
   };
 
   const handleDismiss = () => {

@@ -1,6 +1,26 @@
+.container {
+  width: 100%;
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.th:nth-child(1),
+.td:nth-child(1) {
+  width: 10%;
+}
+
+.th:nth-child(2),
+.td:nth-child(2) {
+  width: 65%;
+}
+
+.th:nth-child(3),
+.td:nth-child(3) {
+  width: 25%;
 }
 
 .th {
@@ -24,4 +44,23 @@
   color: var(--text-1);
   text-align: center;
   padding: 2rem 0;
+}
+
+.currentPlayer {
+  margin-top: 2rem;
+  border-top: 2px dashed var(--muted-rainbow-5);
+  padding-top: 1rem;
+}
+
+.currentPlayerLabel {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-2);
+  margin: 0 0 0.5rem;
+}
+
+.currentPlayerRow {
+  background-color: var(--background-2);
+  font-weight: 600;
 }

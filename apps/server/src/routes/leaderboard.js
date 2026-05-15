@@ -1,8 +1,8 @@
 const { Router } = require('express');
-const { getLeaderBoard } = require('../controllers/leaderboardController');
+const { getLeaderboard } = require('../controllers/leaderboardController');
 
 const router = Router();
 
-router.get('/', getLeaderBoard);
+router.get('/', getLeaderboard);
 
 module.exports = router;

@@ -30,5 +30,8 @@ export const completeSession = (token, playerName) =>
     body: JSON.stringify({ playerName }),
   }).then(handleResponse);
 
-export const fetchLeaderBoard = (imageId) =>
-  fetch(`${BASE_URL}/leaderboard?imageId=${imageId}`).then(handleResponse);
+export const fetchLeaderboard = (imageId, token) => {
+  const params = new URLSearchParams({ imageId });
+  if (token) params.append('token', token);
+  return fetch(`${BASE_URL}/leaderboard?${params}`).then(handleResponse);
+};
