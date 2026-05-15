@@ -5,7 +5,6 @@ const TargetingBox = ({
   characters,
   foundCharacters,
   onGuess,
-  onDismiss,
 }) => {
   const unfoundCharacters = characters.filter(
     (c) => !foundCharacters.includes(c.id)
@@ -13,7 +12,6 @@ const TargetingBox = ({
 
   return (
     <>
-      <div className={styles.overlay} onClick={onDismiss} />
       <div
         className={styles.box}
         style={{

@@ -50,6 +50,14 @@ const GamePage = () => {
     setModalDismissed(true);
   };
 
+  const handleWrapperClick = (e) => {
+    if (targetingBox) {
+      dismissTargetingBox();
+      return;
+    }
+    handleImageClick(e);
+  };
+
   if (loading) return <p className={styles.status}>Loading...</p>;
   if (error) return <p className={styles.status}>Error: {error}</p>;
 
@@ -63,7 +71,7 @@ const GamePage = () => {
         />
         <Timer seconds={elapsedSeconds} />
       </div>
-      <div className={styles.imageWrapper} onClick={handleImageClick}>
+      <div className={styles.imageWrapper} onClick={handleWrapperClick}>
         <img
           src={image.url}
           alt={image.name}
@@ -76,7 +84,6 @@ const GamePage = () => {
             characters={image.characters}
             foundCharacters={foundCharacters}
             onGuess={handleGuess}
-            onDismiss={dismissTargetingBox}
           />
         )}
       </div>
