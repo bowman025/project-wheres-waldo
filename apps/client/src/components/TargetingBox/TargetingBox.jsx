@@ -15,8 +15,9 @@ const TargetingBox = ({
       <div
         className={styles.box}
         style={{
-          left: targetingBox.pixelX,
+          left: `clamp(0px, ${targetingBox.pixelX}px, calc(100% - 160px))`,
           top: targetingBox.pixelY,
+          transform: 'translateY(8px)',
         }}
         onClick={(e) => e.stopPropagation()}
       >
